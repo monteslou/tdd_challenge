@@ -1,5 +1,12 @@
 package com.company;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -7,15 +14,7 @@ public class Main {
     }
 
     public static int[] sort(int[] input) {
-        for (int i = 0; i < input.length; i++) {
-            for (int j = 0; j < input.length - i - 1; j++) {
-                if (input[j] > input[j + 1]) {
-                    int temp = input[j];
-                    input[j] = input[j + 1];
-                    input[j + 1] = temp;
-                }
-            }
-        }
+        Arrays.sort(input);
         return input;
     }
 }
